@@ -87,7 +87,7 @@ const Modal: React.FC<ModalProps> = ({
   return (
     <div className={s.modalOverlay}>
       <div className={s.modal}>
-        <CircularProgress size={100} color="secondary" />
+        <CircularProgress size={60} color="secondary" />
       </div>
     </div>
   );

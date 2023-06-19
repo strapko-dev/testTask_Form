@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   InputLabel,
@@ -31,6 +31,16 @@ const FormMain = () => {
   const formik = useFormikContext<FormikValues>();
   const matches = useMediaQuery("(max-width:657px)");
   const width = matches ? "100%" : "50%";
+  const [error, setError] = useState("");
+
+  const onClick = () => {
+    if (!!formik.values.phone && !!formik.values.email) {
+      setError("");
+      navigate("/step1");
+    } else {
+      setError("Заполните обязательные поля");
+    }
+  };
 
   return (
     <>
@@ -77,14 +87,15 @@ const FormMain = () => {
       <Button
         id="button-start"
         variant="contained"
-        onClick={() => {
-          navigate("/step1");
-        }}
+        onClick={onClick}
         color="secondary"
         sx={{ padding: "12px 16px", width: "100px" }}
       >
         Начать
       </Button>
+      <Typography variant="body1" color={"error"}>
+        {error}
+      </Typography>
     </>
   );
 };
