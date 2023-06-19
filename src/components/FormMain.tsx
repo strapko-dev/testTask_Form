@@ -9,7 +9,6 @@ import {
 } from "@mui/material";
 import { FormikErrors, FormikValues, useFormikContext } from "formik";
 import { useNavigate } from "react-router-dom";
-import parsePhoneNumberFromString from "libphonenumber-js";
 
 export interface FormMainProps {
   errors: FormikErrors<{
@@ -26,15 +25,6 @@ export interface FormMainProps {
   }>;
   isValid: boolean;
 }
-
-// const phoneNumber = (value: string) => {
-//   const number = parsePhoneNumberFromString(value);
-
-//   if (!number) {
-//     return value;
-//   }
-//   return number;
-// };
 
 const FormMain = () => {
   const navigate = useNavigate();

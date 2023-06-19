@@ -26,7 +26,6 @@
 @media (max-width:657px) {
   .modal {
     width: 260px;
-    height: 152px;
   }
 }
 
@@ -34,6 +33,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .closeButton {
