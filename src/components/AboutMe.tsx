@@ -18,7 +18,7 @@ export default function AboutMe() {
           <Link href="tel:+79964102523" description="Telegram" />
           <Link href="https://github.com/strapko-dev" description="GitHub" />
           <Link
-            href="https://drive.google.com/file/d/1jzuN0sb2takPKfzDgG8kIa6gflRJlMbc/view?usp=sharing"
+            href="https://drive.google.com/file/d/1CdldEyFHapEu4YAjKJGqKMXqGjMAtYY6/view?usp=sharing"
             description="Resume"
           />
         </Stack>
